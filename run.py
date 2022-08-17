@@ -1,0 +1,10 @@
+import os
+from selenium import webdriver
+
+os.environ['PATH'] += r"C:/SeleniumDrivers"
+driver = webdriver.Chrome("C:\chromedriver_win32 (2)\chromedriver.exe")
+driver.get("https://www.seleniumeasy.com/test/jquery-download-progress-bar-demo.html")
+driver.implicitly_wait(5)
+my_element = driver.find_element_by_id('downloadButton')
+my_element.click()
+
