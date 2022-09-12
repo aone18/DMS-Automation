@@ -1,4 +1,6 @@
-from dms.utils import insert, click, select,sleep
+from selenium.webdriver.common.by import By
+
+from dms.utils import insert, click, select, sleep, explicitly_click
 from dms.constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -12,8 +14,7 @@ def add_document(driver):
     driver.get(url+"/#/admin/documentList")
 
     # Click Add document
-    sleep(2)
-    click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/div[2]/div/div[1]/a')
+    explicitly_click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/div[2]/div/div[1]/a')
 
     # fill form
     sleep(2)
