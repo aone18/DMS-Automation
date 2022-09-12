@@ -1,6 +1,6 @@
-from utils import insert, click
+from dms.utils import insert, click
 import time
-from constants import url
+from dms.constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 

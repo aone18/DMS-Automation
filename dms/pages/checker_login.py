@@ -1,7 +1,7 @@
-from utils import click, insert
+from dms.utils import click, insert
 
 email_key = "sagar@rbb.com.np"
-password_key = "Aone@1234"
+password_key = "Admin@123"
 
 
 def checker_login(driver):
