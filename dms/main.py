@@ -1,4 +1,7 @@
 from selenium import webdriver
+
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from pages.add_document import add_document
 from pages.file_upload_modal import file_upload_modal
 from pages.login import login
@@ -18,7 +21,8 @@ from constants import url, driver_url
 from pages.edit_document import edit_document
 # used chrome driver
 
-driver = webdriver.Chrome(driver_url)
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get(url)
 
 # full screen
