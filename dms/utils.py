@@ -24,3 +24,6 @@ def clear(driver,name):
 
 def sleep(value):
     time.sleep(value)
+
+def implicitly(driver,value):
+    driver.implicitly_wait(value)

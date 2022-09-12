@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from pages.add_document import add_document
 from pages.file_upload_modal import file_upload_modal
-from pages.login import login
+from pages.login import login,logout
 from pages.checker import checker
 from pages.checker_login import checker_login
 from pages.add_user import add_user
@@ -30,6 +30,7 @@ driver.get(url)
 driver.maximize_window()
 #login path
 login(driver)
+
 # checker login
 #checker_login(driver)
 
