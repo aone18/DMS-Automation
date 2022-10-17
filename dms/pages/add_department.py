@@ -1,6 +1,6 @@
-from utils import insert,click
+from dms.utils import insert,click,clear,sleep
 import time
-from constants import url
+from dms.constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 name= 'aone'
@@ -10,13 +10,13 @@ def add_department(driver):
     driver.get(url+"/#/admin/departments")
     time.sleep(2)
     click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/div[2]/div/div[1]/a')
-    time.sleep(2)
+    sleep(2)
     insert(driver, '//*[@id="name"]', name)
     click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/form/div[2]/button[2]')
-    time.sleep(2)
+    sleep(1)
     click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/div[2]/div/div[2]/div/table/tbody/tr[last()]/td[last()]/a/i')
-    time.sleep(2)
-    driver.find_element_by_id('name').clear()
+    sleep(1)
+    clear(driver,'name')
     insert(driver, '//*[@id="name"]',name1)
     click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/form/div[2]/button[2]')
     time.sleep(2)

@@ -1,4 +1,4 @@
-from dms.utils import insert, click
+from dms.utils import insert, click,clear
 import time
 from dms.constants import url
 from selenium.webdriver.support.ui import WebDriverWait
@@ -27,7 +27,7 @@ def add_branch(driver):
     time.sleep(2)
     click(driver, '//*[@id="toExcelData"]/tbody/tr[last()]/td[last()]/div/a/i')
     time.sleep(2)
-    driver.find_element_by_id('name').clear()
+    clear(driver, 'name')
     insert(driver, '//*[@id="name"]', name1)
     click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/form/div[2]/button[2]')
     time.sleep(2)

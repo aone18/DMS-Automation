@@ -1,5 +1,5 @@
-from utils import insert, click,sleep
-from constants import url
+from dms.utils import insert, click,sleep,clear
+from dms.constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 name= 'abcd'
@@ -16,7 +16,7 @@ def location_type(driver):
     sleep(2)
     click(driver,'//*[@id="root"]/div[2]/div/main/div[2]/div/div[2]/div[2]/table/tbody/tr[last()]/td[last()]/div/a/i')
     sleep(2)
-    driver.find_element_by_id('name').clear()
+    clear(driver, 'name')
     insert(driver,'//*[@id="name"]',name1)
     click(driver,'//*[@id="root"]/div[2]/div/main/div[2]/div/form/div[2]/button[2]')
     sleep(4)

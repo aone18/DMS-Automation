@@ -1,12 +1,12 @@
-from utils import insert,select,click
+from dms.utils import insert,select,click,sleep,clear
 import time
-from constants import url
+from dms.constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-number = '3221'
-email = 'abcd@rbb.com.np'
+number = '3221231'
+email = 'ram@rbb.com.np'
 name = 'abcdef'
-name1 = 'sabin'
+name1 = 'sabin11'
 new_password = 'Aone@123'
 confirm_password = 'Aone@123'
 def add_user(driver):
@@ -18,28 +18,24 @@ def add_user(driver):
     insert(driver, '//*[@id="identityNo"]', number)
     insert(driver, '//*[@id="email"]', email)
     insert(driver, '//*[@id="name"]', name)
-    select(driver, '//*[@id="roleId"]', "1")
-    select(driver, '//*[@id="hierarchy"]', "Branch_2")
+    select(driver, 'roleId', "1005")
+    select(driver, 'hierarchy', "Branch_4")
     insert(driver, '//*[@id="password"]', new_password)
     insert(driver, '//*[@id="confirmPassword"]', confirm_password)
     click(driver,'//*[@id="signup-form"]/div[2]/button[2]')
-    time.sleep(2)
-    driver.execute_script("window.scrollTo(0, 1080)")
-    click(driver,'//*[@id="root"]/div[2]/div/main/div[2]/div/div[2]/div/div[2]/div[3]/div[1]/nav/ul/li[last()]/button')
-    time.sleep(2)
-    click(driver, '//*[@id="toExcelData"]/tbody/tr[last()]/td[last()]/div/a/i')
-    time.sleep(2)
-    driver.find_element_by_id('name').clear()
+    sleep(2)
+    click(driver, '//*[@id="toExcelData"]/tbody/tr[last()]/td[last()]/div/a')
+    sleep(2)
+    clear(driver,'name')
     insert(driver, '//*[@id="name"]', name1)
-    select(driver,'roleId', "4")
+    select(driver,'roleId', "1009")
     click(driver,'//*[@id="signup-form"]/div[2]/button[2]')
     time.sleep(2)
     WebDriverWait(driver, 10).until(EC.alert_is_present())
     driver.switch_to.alert.accept()
-    time.sleep(2)
-    driver.execute_script("window.scrollTo(0, 1080)")
-    click(driver,'//*[@id="root"]/div[2]/div/main/div[2]/div/div[2]/div/div[2]/div[3]/div[1]/nav/ul/li[last()]/button')
+    sleep(2)
     click(driver,'//*[@id="toExcelData"]/tbody/tr[last()]/td[last()]/div/button/i')
+    sleep(2)
     WebDriverWait(driver, 10).until(EC.alert_is_present())
     driver.switch_to.alert.accept()
 

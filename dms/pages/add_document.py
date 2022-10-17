@@ -12,6 +12,7 @@ name = 'automation testing'
 def add_document(driver):
     sleep(2)
     driver.get(url+"/#/admin/documentList")
+    sleep(2)
 
     # Click Add document
     explicitly_click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/div[2]/div/div[1]/a')
@@ -22,14 +23,23 @@ def add_document(driver):
     insert(driver, '//*[@id="otherTitle"]', name)
     select(driver, 'statusId', "1")
     select(driver, 'locationMapId', "3")
-    select(driver, 'checker',"3")
+    select(driver, 'checker',"1022")
     click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/form/div/div[3]/button[2]')
 
     # upload document / file
     sleep(2)
     driver.execute_script("window.scrollTo(0, 1080)")   # scroll down
     insert(driver, '//*[@id="file"]',"C:/Users/bhumika/Pictures/dms dashboard.PNG")
-    click(driver,'//*[@id="root"]/div[2]/div/main/div[2]/div/div[3]/div[1]/div[3]/button')
+    click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/div[3]/div[1]/div[3]/button')
+    sleep(2)
+    insert(driver, '//*[@id="file"]',"C:/Users/bhumika/Downloads/dummy.pdf")
+    click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/div[3]/div[1]/div[3]/button/i' )
+    sleep(8)
+    click(driver, '//*[@id="toExcelData"]/tbody/tr[2]/td[4]/div/button')
+    sleep(2)
+    WebDriverWait(driver, 10).until(EC.alert_is_present())
+    driver.switch_to.alert.accept()
+    sleep(2)
 
     # Click send to checker button
     click(driver, '//*[@id="caret"]')
@@ -70,6 +80,8 @@ def add_document(driver):
     checker_login(driver)
     sleep(2)
     checker(driver)
+    sleep(10)
+    logout(driver)
 
     sleep(10)
 
