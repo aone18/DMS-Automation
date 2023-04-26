@@ -1,6 +1,6 @@
-from dms.utils import insert, click, select
+from  utils import insert, click, select
 import time
-from dms.constants import url
+from  constants import url
 
 def file_upload_modal(driver):
     time.sleep(2)

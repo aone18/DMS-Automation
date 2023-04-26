@@ -1,19 +1,19 @@
-from dms.utils import insert, click,clear
+from  utils import insert, click,clear
 import time
-from dms.constants import url
+from  constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-name = 'bhumika'
-address = 'ghimire'
-code = '001'
-name1 = 'vumees'
+name = 'aone'
+address = 'kritipur'
+code = '21'
+name1 = 'aonesen'
 
 
 def add_branch(driver):
     time.sleep(2)
-    driver.get(url + "/#/admin/branches")
+    driver.get(url + "/#/branches")
     time.sleep(2)
     click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/div[1]/a')
     time.sleep(2)

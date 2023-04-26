@@ -1,6 +1,6 @@
-from dms.utils import insert,click,clear,sleep
+from  utils import insert,click,clear,sleep
 import time
-from dms.constants  import url
+from  constants  import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -8,7 +8,7 @@ condition= 'abcdef'
 condition1='wxyz'
 def document_conditions(driver):
     time.sleep(2)
-    driver.get(url+"/#/admin/document-conditions")
+    driver.get(url+"/#/document-conditions")
     time.sleep(2)
     click(driver,'//*[@id="root"]/div[2]/div/main/div[2]/div/div[1]/a')
     time.sleep(2)

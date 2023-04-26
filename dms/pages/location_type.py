@@ -1,5 +1,5 @@
-from dms.utils import insert, click,sleep,clear
-from dms.constants import url
+from  utils import insert, click,sleep,clear
+from  constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 name= 'abcd'
@@ -7,7 +7,7 @@ name1= 'efgh'
 
 def location_type(driver):
     sleep(2)
-    driver.get(url+"/#/admin/locationTypes")
+    driver.get(url+"/#/locationTypes")
     sleep(2)
     click(driver,'//*[@id="root"]/div[2]/div/main/div[2]/div/div[1]/a')
     sleep(2)

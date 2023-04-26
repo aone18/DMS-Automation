@@ -1,8 +1,9 @@
-from dms.utils import click, insert
+from  utils import click, insert
 from time import sleep
 
 email_key = "admin@gentech.com"
-password_key = "Aone@1234"
+password_key = "admin123"
+
 email = "sagar@rbb.com.np"
 password = "Aone@1234"
 

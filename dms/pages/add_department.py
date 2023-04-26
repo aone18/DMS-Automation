@@ -1,13 +1,13 @@
-from dms.utils import insert,click,clear,sleep
+from utils import insert,click,clear,sleep
 import time
-from dms.constants import url
+from  constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 name= 'aone'
 name1= "aone sen"
 def add_department(driver):
     time.sleep(2)
-    driver.get(url+"/#/admin/departments")
+    driver.get(url+"/#/departments")
     time.sleep(2)
     click(driver, '//*[@id="root"]/div[2]/div/main/div[2]/div/div[2]/div/div[1]/a')
     sleep(2)

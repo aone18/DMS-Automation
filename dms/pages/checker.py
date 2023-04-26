@@ -1,11 +1,11 @@
-from dms.utils import click, sleep
-from dms.constants import url
+from  utils import click, sleep
+from  constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 def checker(driver):
     sleep(2)
-    driver.get(url+"/#/admin/pending")
+    driver.get(url+"/#/pending")
     sleep(2)
     click(driver, "//*[@id='toExcel']/tbody/tr[1]/td[4]/a")
     sleep(2)

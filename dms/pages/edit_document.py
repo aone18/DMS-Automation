@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 def edit_document(driver):
     time.sleep(2)
-    driver.get(url+"/#/admin/edit?i=QDmz20XdO3")
+    driver.get(url+"/#/edit?i=QDmz20XdO3")
     time.sleep(2)
     select(driver, 'securityLevel', "3")
 

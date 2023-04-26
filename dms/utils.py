@@ -4,12 +4,12 @@ import time
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from dms.constants import url
+from constants import url
 
-def setCookieForLogin(driver):
-    driver.add_cookie({"name":"jwt",
-                       "value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnZW50ZWNoLmNvbSIsInJvbGVJZCI6MSwiaGllcmFyY2h5IjoiU3VwZXItMDAxIiwiYnJhbmNoSWQiOjEsImRlcGFydG1lbnRJZCI6MSwiZXhwaXJlc0luIjowLCJpYXQiOjE2NjU0ODkzMjN9.z20d5EyS0rH3O1UGoyVIbZwUZ7QVAn_mwmuA92hJymQ" })
-    driver.get(url)
+def setCookie(driver,key,value ):
+    driver.add_cookie({"name":key,
+                       "value":value})
+                       
 
 def insert(driver, xpath, value):
     driver.find_element(By.XPATH, xpath).send_keys(value)
@@ -52,6 +52,18 @@ def sleep(value):
 
 def implicitly_wait(driver,value):
     driver.implicitly_wait(value)
+
+
+# def userNameCheck(driver,xpath):
+#     driver.find_element(By.XPATH,xpath)
+
+def userNameCheck(driver, xpath):
+    try:
+        element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, xpath)))
+        return element
+    except:
+        return None
+
 
 
 

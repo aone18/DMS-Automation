@@ -1,17 +1,17 @@
 from selenium.webdriver.common.by import By
 
-from dms.utils import insert, click, select, sleep, explicitly_click
-from dms.constants import url
+from  utils import insert, click, select, sleep, explicitly_click
+from  constants import url
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from dms.pages.login import logout,login,checker_login
-from dms.pages.checker import checker
+from  pages.login import logout,login,checker_login
+from  pages.checker import checker
 name = 'automation testing'
 
 
 def add_document(driver):
     sleep(2)
-    driver.get(url+"/#/admin/documentList")
+    driver.get(url+"/#/documentList")
     sleep(2)
 
     # Click Add document

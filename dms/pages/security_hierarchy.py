@@ -1,8 +1,8 @@
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
-from dms.utils import insert, select,selectname, click, sleep,dynamic_explicitly_click
-from dms.constants import url
+from  utils import insert, select,selectname, click, sleep,dynamic_explicitly_click
+from  constants import url
 name = "aone"
 
 def security_hierarchy(driver):
