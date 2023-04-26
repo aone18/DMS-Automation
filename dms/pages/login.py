@@ -13,11 +13,17 @@ def login(driver):
 
     click(driver, "//*[@id='signin-form']/div[3]/div/button")
 
+def loginT(driver,loginEmail, loginPassword):
+    insert(driver, "//*[@id='signin-form']/div[1]/input", loginEmail)
+    insert(driver, "//*[@id='signin-form']/div[2]/input", loginPassword)
+    click(driver, "//*[@id='signin-form']/div[3]/div/button")
+    sleep(2)
+
 def logout(driver):
-    driver.implicitly_wait(20)
-    click(driver, '//*[@id="root"]/div[2]/header/ul/li/a/span/i')
-    driver.implicitly_wait(20)
-    click(driver, '//*[@id="root"]/div[2]/header/ul/li/div/button[2]')
+    driver.implicitly_wait(10)
+    click(driver, "//i[@class='fas fa-user-circle fa-2x']")
+    driver.implicitly_wait(10)
+    click(driver, "//i[@class='fas fa-sign-out-alt']")
 
 
 
