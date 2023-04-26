@@ -3,7 +3,6 @@ from time import sleep
 
 email_key = "admin@gentech.com"
 password_key = "admin123"
-
 email = "sagar@rbb.com.np"
 password = "Aone@1234"
 

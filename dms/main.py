@@ -2,23 +2,8 @@ from constants import url
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from  pages.add_branch import add_branch
-from  pages.add_department import add_department
-from  pages.add_user import add_user
-from  pages.document_type import document_type
-from  pages.document_index import document_index
-from  pages.location_type import location_type
-from  pages.location_maps import location_maps
-from  pages.languages import languages
-from  pages.add_document import add_document
-from  pages.document_conditions import document_conditions
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from  pages.security_hierarchy import security_hierarchy
 from pages.login import login
-from pages.role import role
-from pages.api.login import login_api
-from pages.testUser import test_user_creation_by_name, test_user_update_by_name, test_user_delete_by_name
+from dms.test.testUser import test_user_creation_by_name, test_user_update_by_name, test_user_delete_by_name
 
 # from pages.edit_document import edit_document
 # used chrome driver
