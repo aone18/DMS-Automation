@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from pages.login import login
 from dms.test.testUser import test_user_creation_by_name, test_user_update_by_name, test_user_delete_by_name
+from pages.role import role
 
 # from pages.edit_document import edit_document
 # used chrome driver
@@ -60,7 +61,7 @@ login(driver)
 # add_document(driver)
 
 # add role path
-#role(driver)
+role(driver)
 
 # add security hierarchy path
 # security_hierarchy(driver)

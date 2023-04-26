@@ -6,7 +6,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 def test_user_creation_by_name(driver):
-    #54
 
     add_user(driver)
     driver.get(url + "/#/admin/users")
