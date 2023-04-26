@@ -29,9 +29,6 @@ login(driver)
 # checker(driver)
 # add_document(driver)
 # add user path
-test_user_creation_by_name(driver)
-test_user_update_by_name(driver)
-test_user_delete_by_name(driver)
 #add_user(driver)
 # add_department path
 # add_department(driver)
@@ -67,3 +64,10 @@ test_user_delete_by_name(driver)
 
 # add security hierarchy path
 # security_hierarchy(driver)
+
+
+###---TEST CASES---###
+
+# test_user_creation_by_name(driver)
+# test_user_update_by_name(driver)
+# test_user_delete_by_name(driver)
